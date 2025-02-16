@@ -1,0 +1,314 @@
+/* Style de base pour le site */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Application de la police moderne */
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 60px;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Titre principal (h1) plus grand et en gras */
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Sous-titre (h2) plus petit et non gras */
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #666;
+}
+
+/* Style pour les boutons */
+.btn {
+    display: inline-block;
+    font-size: 16px;
+    padding: 12px 24px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Barre de menu */
+nav .menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Logo */
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo .logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+nav .logo .company-name {
+    color: #333;
+    margin-left: 10px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+/* Liens du menu */
+nav .menu-links {
+    display: flex;
+    gap: 20px;
+}
+
+nav .menu-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav .menu-links a:hover {
+    color: #007BFF;
+}
+
+/* Section accueil */
+.accueil {
+    padding: 40px 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Cartes */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Section À propos */
+.about {
+    padding: 40px 20px;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-top {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.about-text li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.about-text li:before {
+    content: "•";
+    color: #007BFF;
+    position: absolute;
+    left: 0;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section équipe et certifications */
+.team, .certifications {
+    padding: 40px 20px;
+}
+
+.team-cards, .certification-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Section services */
+.services {
+    padding: 40px 20px;
+}
+
+.services-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.services-cards .card {
+    width: 80%;
+    max-width: 600px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Section contact */
+.contact {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-header img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-top {
+        flex-direction: column;
+    }
+
+    .about-text, .about-image {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    nav .menu-links {
+        display: none;
+    }
+}

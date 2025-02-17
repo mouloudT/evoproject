@@ -8,62 +8,59 @@
 /* Application de la police moderne */
 body {
     font-family: 'Poppins', sans-serif;
-    padding-top: 60px;
-    min-height: 100vh;
-    background-color: #f5f5f5;
-    color: #333;
 }
 
 /* Titre principal (h1) plus grand et en gras */
 h1 {
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333;
+    font-size: 36px; /* Taille plus grande pour le titre */
+    font-weight: 600; /* Gras pour le titre */
+    margin-bottom: 20px; /* Espacement sous le titre */
+    text-align: center; /* Centrer le titre */
 }
 
 /* Sous-titre (h2) plus petit et non gras */
 h2 {
-    font-size: 24px;
-    font-weight: 400;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #666;
+    font-size: 24px; /* Taille un peu plus petite que le titre principal */
+    font-weight: 400; /* Normal (pas de gras) */
+    margin-bottom: 30px; /* Espacement sous le sous-titre */
+    text-align: center; /* Centrer le sous-titre */
 }
 
-/* Style pour les boutons */
-.btn {
-    display: inline-block;
+/* Ajout d'un style pour le bouton pour qu'il soit mieux mis en valeur */
+button {
     font-size: 16px;
-    padding: 12px 24px;
-    background-color: #007BFF;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Couleur bleue pour le bouton */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: 500;
-    text-decoration: none;
     transition: background-color 0.3s;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+button:hover {
+    background-color: #0056b3; /* Couleur au survol */
 }
 
-/* Barre de menu */
+/* Barre de menu fixée en haut de la page */
 nav .menu-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: white; /* Fond blanc pour la barre de menu */
     padding: 10px 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère sous la barre de menu */
+    position: fixed; /* Fixe le menu en haut de la page */
+    top: 0; /* Le menu est fixé en haut */
+    left: 0; /* Aligne le menu sur la gauche */
+    width: 100%; /* Prend toute la largeur de la page */
+    z-index: 1000; /* Assure que le menu est au-dessus des autres éléments */
+}
+
+/* Ajout de marge pour le contenu afin qu'il ne soit pas caché par le menu */
+body {
+    padding-top: 60px; /* Ajoute de l'espace en haut pour ne pas que le contenu soit masqué par le menu */
 }
 
 /* Logo */
@@ -73,242 +70,293 @@ nav .logo {
 }
 
 nav .logo .logo-img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
+    width: 50px;  /* Taille de l'image agrandie */
+    height: 50px; /* Ajuste également la hauteur pour la proportion */
+    object-fit: contain; /* Assure que l'image garde sa forme sans déformation */
 }
 
 nav .logo .company-name {
-    color: #333;
+    color: black; /* Texte en noir */
     margin-left: 10px;
     font-size: 1.5em;
-    font-weight: 600;
 }
 
 /* Liens du menu */
-nav .menu-links {
-    display: flex;
-    gap: 20px;
-}
-
 nav .menu-links a {
-    color: #333;
+    color: black; /* Liens en noir */
     text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 500;
-    transition: color 0.3s;
+    margin-left: 20px;
+    font-size: 1.2em;
 }
 
 nav .menu-links a:hover {
-    color: #007BFF;
+    color: #ff6347; /* Change la couleur du texte au survol */
 }
 
-/* Section accueil */
-.accueil {
-    padding: 40px 20px;
+
+
+/* Section "À propos" */
+.about-content {
+    display: flex; /* Utilise Flexbox pour placer l'image à droite et le texte à gauche */
+    justify-content: space-between; /* Espacement entre le texte et l'image */
+    align-items: flex-start; /* Aligner les éléments en haut */
+    margin-top: 40px; /* Espace au-dessus de la section */
 }
 
-.intro {
+.left {
+    width: 50%; /* Prend 50% de la largeur */
+    padding-right: 30px; /* Espace entre le texte et l'image */
+}
+
+.left h1 {
+    font-size: 2em; /* Taille du titre */
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+.left p {
+    font-size: 1.2em; /* Taille du texte */
+    margin-bottom: 20px; /* Espacement sous le texte */
+}
+
+.left ul {
+    list-style-type: none; /* Enlève les puces */
+    padding: 0;
+}
+
+.left li {
+    font-size: 1.1em; /* Taille des éléments de la liste */
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+}
+
+.right {
+    width: 50%; /* Prend 50% de la largeur */
+}
+
+.right img {
+    width: 100%; /* L'image prend toute la largeur du conteneur */
+    height: auto; /* L'image garde ses proportions */
+    border-radius: 8px; /* Arrondir les coins de l'image */
+}
+
+/* Section "Notre équipe" */
+.team {
+    margin-top: 40px; /* Espace au-dessus de la section équipe */
     text-align: center;
-    margin-bottom: 60px;
 }
 
-/* Cartes */
-.cards {
+.team h2 {
+    font-size: 2em; /* Taille du titre */
+    margin-bottom: 20px;
+}
+
+.team-cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
+}
+
+.team-cards .card {
+    background-color: white;
+    border-radius: 10px;
     padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-cards .card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.team-cards .card p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Section "Nos certifications" */
+.certifications {
+    margin-top: 40px; /* Espace au-dessus de la section certifications */
+    text-align: center;
+}
+
+.certifications h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.certification-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.certification-cards .card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.certification-cards .card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.certification-cards .card p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Style de base pour les sections */
+header, section {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Carte d'élément général */
+.cards, .team-cards, .certification-cards, .services-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .card {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 20px;
     text-align: center;
-    width: 300px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    width: 250px;
 }
 
 .card img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
+    width: 50px;
+    height: 50px;
     margin-bottom: 20px;
 }
 
 .card h3 {
     font-size: 1.5em;
-    margin-bottom: 15px;
-    color: #333;
+    margin-bottom: 10px;
 }
 
 .card p {
     color: #666;
-    line-height: 1.6;
 }
 
-/* Section À propos */
-.about {
-    padding: 40px 20px;
-}
-
-.about-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.about-top {
-    display: flex;
-    gap: 40px;
-    margin-bottom: 60px;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-text ul {
-    list-style-type: none;
+.btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
     margin-top: 20px;
 }
 
-.about-text li {
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
-}
-
-.about-text li:before {
-    content: "•";
-    color: #007BFF;
-    position: absolute;
-    left: 0;
-}
-
-.about-image {
-    flex: 1;
-}
-
-.about-image img {
+.contact-form input, .contact-form textarea {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Section équipe et certifications */
-.team, .certifications {
-    padding: 40px 20px;
-}
-
-.team-cards, .certification-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-}
-
-/* Section services */
-.services {
-    padding: 40px 20px;
-}
-
-.services-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-}
-
-.services-cards .card {
-    width: 80%;
-    max-width: 600px;
-}
-
-.card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-/* Section contact */
-.contact {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.contact-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.contact-header img {
-    width: 100px;
-    margin-bottom: 20px;
-}
-
-.contact-form {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
     border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.contact-form textarea {
-    height: 150px;
-    resize: vertical;
+    border: 1px solid #ccc;
 }
 
 .contact-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #007BFF;
+    background-color: #3498db;
     color: white;
-    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1.2em;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .contact-form button:hover {
-    background-color: #0056b3;
+    background-color: #2980b9;
+}
+/* Section "À propos" - partie haute */
+.about-top {
+    display: flex; /* Utilise Flexbox pour mettre le texte et l'image sur la même ligne */
+    justify-content: flex-start; /* Aligner les éléments à gauche */
+    align-items: flex-start; /* Aligner les éléments en haut */
+    margin-bottom: 30px; /* Espace sous la section */
+    width: 100%; /* S'assurer que la section prend toute la largeur */
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .about-top {
-        flex-direction: column;
-    }
+/* Texte à gauche */
+.about-text {
+    width: 50%; /* Prend 50% de la largeur */
+    padding: 0; /* Retirer tout padding supplémentaire */
+    margin-left: 0; /* Aucune marge à gauche */
+    text-align: left; /* Assurer que le texte est bien aligné à gauche */
+}
 
-    .about-text, .about-image {
-        width: 100%;
-    }
+/* Image à droite */
+.about-image {
+    width: 50%; /* Prend 50% de la largeur */
+}
 
-    .card {
-        width: 100%;
-    }
+.about-image img {
+    width: 100%; /* L'image prend toute la largeur de son conteneur */
+    height: auto; /* Garde les proportions de l'image */
+    border-radius: 8px; /* Ajoute un léger arrondi aux coins de l'image */
+}
 
-    nav .menu-links {
-        display: none;
-    }
+/* Section des cartes des services */
+.services-cards {
+    display: flex;
+    flex-direction: column; /* Afficher les cartes les unes sous les autres */
+    align-items: center; /* Centrer les cartes */
+    gap: 20px; /* Espacement entre les cartes */
+}
+
+/* Lien autour des cartes */
+.card-link {
+    text-decoration: none; /* Enlever le soulignement par défaut */
+    color: inherit; /* Assurer que le texte garde la couleur par défaut */
+}
+
+/* Lien autour des cartes */
+.card-link {
+    text-decoration: none; /* Enlever le soulignement par défaut */
+    color: inherit; /* Assurer que le texte garde la couleur par défaut */
+}
+
+/* Effet de survol sur la carte */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px; /* Augmenter le padding pour agrandir la carte */
+    text-align: center;
+    width: 80%; /* Largeur réduite pour rendre les cartes plus grandes */
+    max-width: 400px; /* Largeur maximale de la carte */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animation douce */
+}
+
+/* Effet de survol sur la carte (grossissement et ombre) */
+.card:hover {
+    transform: scale(1.1); /* Augmenter la taille de la carte à 110% */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+}
+
+/* Pour les titres de carte */
+.card h3 {
+    font-size: 2em; /* Agrandir la taille du titre */
+    margin-bottom: 15px; /* Espacement sous le titre */
+}
+
+/* Pour le texte dans les cartes */
+.card p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Ajustement des icônes dans les cartes */
+.card img {
+    width: auto;  /* Garder la largeur automatique pour maintenir les proportions */
+    height: 50px; /* Taille fixe pour la hauteur */
+    margin-bottom: 20px;
+    object-fit: contain; /* Assure que l'image garde ses proportions sans déformation */
 }

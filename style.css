@@ -90,7 +90,7 @@ nav .menu-links a {
 }
 
 nav .menu-links a:hover {
-    color: #ff6347; /* Change la couleur du texte au survol */
+    color: blue; /* Change la couleur du texte au survol */
 }
 
 
@@ -255,26 +255,74 @@ header, section {
     margin-top: 20px;
 }
 
+/* Section de contact */
+.contact {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* En-tête du formulaire */
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-header img {
+    width: 100px;  /* Ajuster la taille du logo */
+    margin-bottom: 20px;
+}
+
+.contact-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Formulaire de contact */
+.contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 50%; /* Le formulaire occupe désormais 50% de la largeur de la page */
+    max-width: 600px; /* Limite la largeur à 600px pour éviter qu'il devienne trop large */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère autour du formulaire */
+}
+
+/* Champs du formulaire */
 .contact-form input, .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border-radius: 5px;
     border: 1px solid #ccc;
+    font-size: 1.1em;
 }
 
+/* Bouton d'envoi */
 .contact-form button {
     background-color: #3498db;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 20px;
     font-size: 1.2em;
+    border-radius: 5px;
     cursor: pointer;
+    border: none;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .contact-form button:hover {
     background-color: #2980b9;
 }
+
+
 /* Section "À propos" - partie haute */
 .about-top {
     display: flex; /* Utilise Flexbox pour mettre le texte et l'image sur la même ligne */
@@ -284,13 +332,49 @@ header, section {
     width: 100%; /* S'assurer que la section prend toute la largeur */
 }
 
-/* Texte à gauche */
+/* Amélioration de l'arrangement du texte à gauche */
 .about-text {
-    width: 50%; /* Prend 50% de la largeur */
-    padding: 0; /* Retirer tout padding supplémentaire */
-    margin-left: 0; /* Aucune marge à gauche */
-    text-align: left; /* Assurer que le texte est bien aligné à gauche */
+    width: 60%; /* On peut augmenter la largeur du texte */
+    padding-right: 30px; /* Plus d'espace à droite pour séparer du texte de l'image */
+    text-align: left; /* Le texte reste aligné à gauche */
+    line-height: 1.6; /* Meilleure lisibilité */
 }
+
+/* Marges et espacement entre les éléments de la liste */
+.about-text ul {
+    padding-left: 20px; /* Un petit padding pour que la liste ne soit pas collée au texte */
+}
+
+.about-text li {
+    font-size: 1.1em; /* Augmenter légèrement la taille pour la lisibilité */
+    margin-bottom: 12px; /* Un peu plus d'espace entre les items de la liste */
+}
+
+/* Amélioration de l'image */
+.about-image img {
+    width: 100%; /* Garde l'image responsive */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour l'image */
+}
+
+.about-top {
+    background-color: #f5f5f5; /* Fond léger */
+    padding: 40px 0; /* Plus de padding pour espacer le contenu */
+    border-radius: 10px; /* Arrondir les coins */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre légère pour l'effet de profondeur */
+}
+
+
+
+/* Pour les titres */
+.about-text h1 {
+    font-size: 2.5em; /* Agrandir un peu le titre */
+    font-weight: 600; /* Gras pour le titre */
+    margin-bottom: 20px;
+    color: #333; /* Couleur du texte */
+}
+
 
 /* Image à droite */
 .about-image {
@@ -360,4 +444,3 @@ header, section {
     margin-bottom: 20px;
     object-fit: contain; /* Assure que l'image garde ses proportions sans déformation */
 }
-
